@@ -61,7 +61,7 @@
 					<execution>
 						<phase>generate-resources</phase>
 						<goals>
-							<goal>generate-localization</goal>
+							<goal>update-localization</goal>
 						</goals>
 						<configuration>
 							<languages>
