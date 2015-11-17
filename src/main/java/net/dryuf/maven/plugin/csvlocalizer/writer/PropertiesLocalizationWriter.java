@@ -1,7 +1,7 @@
-package org.druf.maven.plugin.csvlocalizer.writer;
+package net.dryuf.maven.plugin.csvlocalizer.writer;
 
-import org.druf.maven.plugin.csvlocalizer.Configuration;
-import org.druf.maven.plugin.csvlocalizer.FileUtil;
+import net.dryuf.maven.plugin.csvlocalizer.Configuration;
+import net.dryuf.maven.plugin.csvlocalizer.FileUtil;
 
 import java.io.CharArrayWriter;
 import java.io.File;
@@ -32,21 +32,21 @@ public class PropertiesLocalizationWriter implements LocalizationWriter
 			}
 			if (configuration.getGenerateClassMessages()) {
 				new File(new File(configuration.getOutputDirectory(), language), "_class").mkdirs();
-				FileUtil.updateFile(new File(new File(new File(configuration.getOutputDirectory(), language), "_class"), clazz+".localize.properties"), serializeProperties(clazzProperties));
+				FileUtil.updateFile(new File(new File(new File(configuration.getOutputDirectory(), language), "_class"), clazz+".localize.properties"), serializeProperties(configuration, clazzProperties));
 			}
 		}
 		if (configuration.getGenerateMainMessages()) {
-			byte[] content = serializeProperties(properties);
+			byte[] content = serializeProperties(configuration, properties);
 			File outputFile = new File(configuration.getOutputDirectory().toString(), "_messages_"+language+".properties");
 			FileUtil.updateFile(outputFile, content);
 		}
 	}
 
-	private byte[]			serializeProperties(Properties properties) throws IOException
+	private byte[]			serializeProperties(Configuration configuration, Properties properties) throws IOException
 	{
 		CharArrayWriter cmpOutput = new CharArrayWriter();
 		properties.store(cmpOutput, null);
 		String cmpOutputStr = cmpOutput.toString().replaceAll("^#.*?\n", "");
-		return cmpOutputStr.getBytes("UTF-8");
+		return cmpOutputStr.getBytes(configuration.getCharsetEncoding());
 	}
 }

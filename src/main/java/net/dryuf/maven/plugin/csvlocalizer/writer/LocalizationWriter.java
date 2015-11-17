@@ -1,8 +1,8 @@
-package org.druf.maven.plugin.csvlocalizer.writer;
+package net.dryuf.maven.plugin.csvlocalizer.writer;
 
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
-import org.druf.maven.plugin.csvlocalizer.Configuration;
+import net.dryuf.maven.plugin.csvlocalizer.Configuration;
 
 import java.io.File;
 import java.io.IOException;

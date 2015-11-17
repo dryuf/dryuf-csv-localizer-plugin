@@ -9,7 +9,7 @@ Typical usage is as follows:
 `pom.xml` looks like:
 ```
 	<plugin>
-		<groupId>org.druf.maven.plugin</groupId>
+		<groupId>net.dryuf.maven.plugin</groupId>
 		<artifactId>maven-csv-localizer-plugin</artifactId>
 		<version>0.0.1</version>
 		<executions>
@@ -40,9 +40,9 @@ Typical usage is as follows:
 And provided `src/main/resources/localize/myproject-translations.csv`:
 ```
 ,,,en,cs
-,org.druf.maven.plugin.csvlocalizer.Generator,Hello,Hello,Ahoj
-,org.druf.maven.plugin.csvlocalizer.Generator,Some # inside,More #,# Another
-#commented out,org.druf.maven.plugin.csvlocalizer.Generator,Again reasonable,Again reasonable,Again reasonable
+,net.dryuf.maven.plugin.csvlocalizer.Generator,Hello,Hello,Ahoj
+,net.dryuf.maven.plugin.csvlocalizer.Generator,Some # inside,More #,# Another
+#commented out,net.dryuf.maven.plugin.csvlocalizer.Generator,Again reasonable,Again reasonable,Again reasonable
 ```
 
 This will generate `localize/_messages_en.properties` and `localize/_messages_cs.properties` with mapping relevant for respective language.

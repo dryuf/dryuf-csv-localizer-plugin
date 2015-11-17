@@ -1,4 +1,4 @@
-package org.druf.maven.plugin.csvlocalizer;
+package net.dryuf.maven.plugin.csvlocalizer;
 
 import java.io.File;
 import java.io.IOException;

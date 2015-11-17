@@ -1,4 +1,4 @@
 ,,,en,cs
-,org.druf.maven.plugin.csvlocalizer.Generator,Hello,Hello,Ahoj
-,org.druf.maven.plugin.csvlocalizer.Generator,Some # inside,More #,# Another
-#,org.druf.maven.plugin.csvlocalizer.Generator,Again reasonable,Again reasonable,Again reasonable
+,net.dryuf.maven.plugin.csvlocalizer.Generator,Hello,Hello,Ahoj
+,net.dryuf.maven.plugin.csvlocalizer.Generator,Some # inside,More #,# Another
+#,net.dryuf.maven.plugin.csvlocalizer.Generator,Again reasonable,Again reasonable,Again reasonable

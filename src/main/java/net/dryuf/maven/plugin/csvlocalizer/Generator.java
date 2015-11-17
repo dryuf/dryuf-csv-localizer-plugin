@@ -1,12 +1,13 @@
-package org.druf.maven.plugin.csvlocalizer;
+package net.dryuf.maven.plugin.csvlocalizer;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-import org.druf.maven.plugin.csvlocalizer.writer.LocalizationWriter;
-import org.druf.maven.plugin.csvlocalizer.writer.PropertiesLocalizationWriter;
+import net.dryuf.maven.plugin.csvlocalizer.writer.LocalizationWriter;
+import net.dryuf.maven.plugin.csvlocalizer.writer.PropertiesLocalizationWriter;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -110,7 +111,7 @@ public class Generator
 			return new InputStreamReader(stream);
 		}
 		else {
-			return new FileReader(filename);
+			return new InputStreamReader(new FileInputStream(new File(filename)), configuration.getCharsetEncoding());
 		}
 	}
 

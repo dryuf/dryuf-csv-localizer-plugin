@@ -1,10 +1,10 @@
-package org.druf.maven.plugin.csvlocalizer;
+package net.dryuf.maven.plugin.csvlocalizer;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-import org.druf.maven.plugin.csvlocalizer.writer.LocalizationWriter;
-import org.druf.maven.plugin.csvlocalizer.writer.PropertiesLocalizationWriter;
+import net.dryuf.maven.plugin.csvlocalizer.writer.LocalizationWriter;
+import net.dryuf.maven.plugin.csvlocalizer.writer.PropertiesLocalizationWriter;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -38,6 +38,16 @@ public class Configuration
 		return languages;
 	}
 
+	public void			setCharsetEncoding(String charsetEncoding)
+	{
+		this.charsetEncoding = charsetEncoding;
+	}
+
+	public String			getCharsetEncoding()
+	{
+		return charsetEncoding;
+	}
+
 	public void			setOutputDirectory(File outputDirectory)
 	{
 		this.outputDirectory = outputDirectory;
@@ -69,6 +79,8 @@ public class Configuration
 	}
 
 	protected String[]		languages;
+
+	protected String		charsetEncoding;
 
 	protected File			outputDirectory;
 

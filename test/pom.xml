@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.druf.maven</groupId>
-	<artifactId>maven-csv-localizer-plugin-test</artifactId>
+	<groupId>net.dryuf.maven.plugin</groupId>
+	<artifactId>csv-localizer-plugin-test</artifactId>
 	<version>0.0.1</version>
-	<name>maven-csv-localizer-plugin-test</name>
+	<name>csv-localizer-plugin-test</name>
 	<description>Maven plugin for converting CSV files into localize files - test</description>
 	<packaging>jar</packaging>
 
 	<properties>
-		<javac.version>1.6</javac.version>
+		<javac.version>1.7</javac.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
@@ -54,7 +54,7 @@
 			</plugin>
 
 			<plugin>
-				<groupId>org.druf.maven.plugin</groupId>
+				<groupId>net.dryuf.maven.plugin</groupId>
 				<artifactId>csv-localizer-plugin</artifactId>
 				<version>${csv-localizer-plugin.version}</version>
 				<executions>

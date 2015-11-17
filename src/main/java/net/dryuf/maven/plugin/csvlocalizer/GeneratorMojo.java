@@ -1,4 +1,4 @@
-package org.druf.maven.plugin.csvlocalizer;
+package net.dryuf.maven.plugin.csvlocalizer;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -7,7 +7,7 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.plugins.annotations.ResolutionScope;
-import org.druf.maven.plugin.csvlocalizer.writer.LocalizationWriter;
+import net.dryuf.maven.plugin.csvlocalizer.writer.LocalizationWriter;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +28,7 @@ public class GeneratorMojo extends AbstractMojo
 		Generator generator = new Generator();
 		Configuration configuration = new Configuration();
 		configuration.setLanguages(languages);
+		configuration.setCharsetEncoding(charsetEncoding);
 		configuration.setOutputDirectory(outputDirectory);
 		configuration.setGenerateMainMessages(generateMainMessages);
 		configuration.setGenerateClassMessages(generateClassMessages);
@@ -73,6 +74,12 @@ public class GeneratorMojo extends AbstractMojo
 	 */
 	@Parameter(required = true)
 	protected String[]		sources;
+
+	/**
+	 * Character set used to both reading source files and writing the generated files.
+	 */
+	@Parameter(required = true, defaultValue = "${project.build.sourceEncoding}")
+	protected String		charsetEncoding = "UTF-8";
 
 	/**
 	 * Output directory for localization files, default is {@code generated-resources/localize/}.
