@@ -1,13 +1,9 @@
 package net.dryuf.maven.plugin.csvlocalizer.writer;
 
-import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugin.MojoFailureException;
 import net.dryuf.maven.plugin.csvlocalizer.Configuration;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.NavigableMap;
-import java.util.TreeMap;
 
 /**
  * Component which actually writes the localization files.
