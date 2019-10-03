@@ -26,7 +26,7 @@
 		<maven-plugin-api.version>3.3.3</maven-plugin-api.version>
 		<maven-plugin-tools.version>3.4</maven-plugin-tools.version>
 
-		<csv-localizer-plugin.version>1.0.0</csv-localizer-plugin.version>
+		<csv-localizer-plugin.version>1.0.1-SNAPSHOT</csv-localizer-plugin.version>
 	</properties>
 
 	<build>
@@ -55,7 +55,7 @@
 
 			<plugin>
 				<groupId>net.dryuf.maven.plugin</groupId>
-				<artifactId>csv-localizer-plugin</artifactId>
+				<artifactId>dryuf-csv-localizer-maven-plugin</artifactId>
 				<version>${csv-localizer-plugin.version}</version>
 				<executions>
 					<execution>
